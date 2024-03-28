@@ -1,0 +1,11 @@
+<html>
+<head>
+ <meta http-equiv="Content-Security-Policy" content="script-src 'sha256-iF/bMbiFXal+AAl9tF8N6+KagNWdMlnhLqWkjAocLsk='">
+</head>
+  <script>
+      alert('xss alert');   
+  </script>
+  <iframe id="if1" src="child.html"></iframe>
+  <iframe id="if3" srcdoc="<script>alert(document.cookie)</script>"></iframe>
+  <iframe id="if3" srcdoc="<script>alert(parent.document.cookie)</script>"></iframe>
+</html>
